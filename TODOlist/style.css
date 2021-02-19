@@ -1,0 +1,128 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+body{
+    
+    background: linear-gradient(90deg, rgba(88,210,176,0.7035013834635417) 0%, rgba(212,206,80,0.8575630081134016) 45%, rgba(136,210,103,1) 100%); 
+    color:whitesmoke;
+    font-family: 'Indie Flower', cursive;
+    min-height: 100vh;
+}
+
+
+header{
+   
+    font-size: 1.6rem;
+}
+header,
+form{
+
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form input,form button{
+    border:none;
+    font-size: 2.2rem;
+    padding: 0.2rem;
+    background: white;
+    
+}
+
+form button{
+color:darkkhaki;
+background: white;
+cursor: pointer;
+transition:all 0.4s ease;
+
+
+
+}
+form button:hover{
+    
+    width: 50px;
+    background:darkkhaki;
+    color: white;
+}
+.todo-container{
+    display: flex;
+justify-content: center;
+align-items: center;
+
+
+}
+
+.todo-list{
+list-style: none;
+min-width: 30%;
+}
+.todo{
+margin: 0.5rem;
+background: white;
+color: black;
+display: flex;
+font-size: 1.8rem;
+justify-content: space-between;
+transition: all 1s ease;
+
+}
+.todo li{
+flex:1;
+
+}
+.cmplt-btn, .trash-btn{
+    background:#2ECC71;
+    color: #F0F3F4 ;
+    padding: 10px;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+
+}
+
+.trash-btn{
+background: #E74C3C;
+
+}
+.item{
+    padding: 0rem 0.5rem;
+    
+
+
+
+}
+.fa-dumpster, .fa-check-square{
+
+pointer-events: none;
+
+}
+.completed{
+text-decoration: line-through;
+opacity: 0.5;
+
+
+
+
+}
+.deleted{
+    animation: removed-item-animation .6s cubic-bezier(.55,-0.04,.91,.94) forwards;
+}
+ 
+@keyframes removed-item-animation {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+ 
+    to {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+
+
